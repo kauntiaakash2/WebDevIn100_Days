@@ -1,0 +1,69 @@
+/* Additional styles for contributors page */
+
+/* Fix for webkit background-clip compatibility */
+.main-title {
+    background: linear-gradient(45deg, #64ffda, #1de9b6, #00bcd4);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contributor-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Enhanced hover effects */
+.contributor-card:hover .contributor-name {
+    color: #64ffda;
+    transition: color 0.3s ease;
+}
+
+/* Loading enhancements */
+.loading {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Certificate modal enhancements */
+.modal-content {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+/* Responsive improvements */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .contributors-grid {
+        padding: 1rem;
+    }
+    
+    .contributor-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-card {
+        width: 100%;
+        max-width: 200px;
+    }
+}
